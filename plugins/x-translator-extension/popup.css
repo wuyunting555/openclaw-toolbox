@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f3f7fb;
+  color: #0f1419;
+}
+
+.popup {
+  width: 320px;
+  padding: 16px;
+}
+
+.popup__title {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.popup__desc {
+  margin: 0 0 16px;
+  color: #536471;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.toggle-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #d9e4ef;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.toggle-card__title {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.toggle-card__hint {
+  color: #536471;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.action-button {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.action-button:hover {
+  opacity: 0.92;
+}
+
+.action-button + .action-button {
+  margin-top: 10px;
+}
+
+.action-button--primary {
+  background: #1d9bf0;
+  color: #ffffff;
+}
+
+.action-button--ghost {
+  background: #ffffff;
+  color: #0f1419;
+  border: 1px solid #d9e4ef;
+}
+
+.status-text {
+  margin: 14px 0 0;
+  min-height: 20px;
+  color: #536471;
+  font-size: 12px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Translator Extension</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1 class="popup__title">X Translator</h1>
+      <p class="popup__desc">自动为 X / Twitter 页面中的非中文推文插入中文翻译，不需要填写 API key。</p>
+
+      <label class="toggle-card" for="autoTranslateToggle">
+        <div>
+          <div class="toggle-card__title">启用自动翻译</div>
+          <div class="toggle-card__hint">开启后会自动处理当前页面以及滚动新加载的推文。</div>
+        </div>
+        <input id="autoTranslateToggle" type="checkbox" />
+      </label>
+
+      <button id="translateNowButton" class="action-button action-button--primary" type="button">
+        立即翻译当前页面
+      </button>
+
+      <button id="restoreButton" class="action-button action-button--ghost" type="button">
+        恢复当前页面原始显示
+      </button>
+
+      <p id="statusText" class="status-text">正在读取设置...</p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

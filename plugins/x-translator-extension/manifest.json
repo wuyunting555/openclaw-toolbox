@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "x-translator-extension",
+  "version": "1.0.0",
+  "description": "为 X（Twitter）页面中的非中文推文插入中文翻译。",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://translate.googleapis.com/*",
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "X Translator Extension",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
